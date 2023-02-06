@@ -3,7 +3,7 @@
 vec4 linear_fog(vec4 inColor, float vertexDistance, float fogStart, float fogEnd, vec4 fogColor) {
     float fogValue = 0.0;
     if (2.5 <= vertexDistance && vertexDistance <= 3.0) {
-        return vec4(vec3(0.0), inColor.a);
+        return vec4( 1.0 - inColor.rgb * 1.25, inColor.a);
     } 
     else {
     return inColor;
